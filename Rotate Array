@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,m,b[20],j=0,a[20];
+        cin>>n>>m;
+      for(int i=0;i<n;i++)
+     {
+        cin>>a[i];
+        if(i>=m)
+        {
+            b[j]=a[i];
+            j++;
+        }
+     }
+      for(int i=0;i<m;i++)
+      {
+          b[j]=a[i];
+          j++;
+      }
+      for(int j=0;j<n;j++)
+      {
+          cout<<b[j]<<" ";
+      }
+      cout<<"\n";
+    }
+return 0;
+}
