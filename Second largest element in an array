@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a[10],n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int large=INT_MIN,sec,k;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]>large)
+        {
+            large=a[i];
+            k=i;
+        }
+    }
+    sec=0;
+    for(int j=0;j<n;j++)
+    {
+        if(j==k)
+            continue;
+        else
+            if(a[j]>sec)
+            {
+                sec=a[j];
+            }
+    }
+    cout<<sec;
+
+}
+    
