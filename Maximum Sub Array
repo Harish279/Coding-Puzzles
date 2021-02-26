@@ -1,0 +1,26 @@
+#include<bits\stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,z=0;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int max=0,ans=INT_MIN;
+    for (int i=0;i<n;i++)
+    {
+        max=max+a[i];
+        if(max>ans)
+            ans=max;
+        
+        if(max<0)
+            max=0;
+
+    }
+    cout<<ans;
+return 0;
+}
