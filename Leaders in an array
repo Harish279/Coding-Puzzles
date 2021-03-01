@@ -1,36 +1,23 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
 int main()
 {
-    int n,x=0;
+    int n;
     cin>>n;
     int a[n];
     for(int i=0;i<n;i++)
     {
         cin>>a[i];
     }
-    int leader;
-    for(int i=0;i<n-1;i++)
+    int leader=a[n-1];
+    cout<<a[n-1]<<" ";
+    for(int i=n-2;i>=0;i--)
     {
-        leader=a[i];
-        int flag=0;
-        for(int j=i+1;j<n;j++)
-        {
-            if(leader>=a[j])
-            {
-                flag=1;
-            }
-            else
-            {
-                flag=0;
-                break;
-            }
-            
-        }
-        if(flag==1)
+        if(a[i]>=leader)
+           {
+            leader=a[i];
             cout<<leader<<" ";
+           }
     }
-    cout<<a[n-1];
 return 0;
 }
