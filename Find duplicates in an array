@@ -1,0 +1,26 @@
+vector<int> duplicates(int a[], int n) 
+{
+    vector <int > v;
+    int j=0,flag=-1;
+    
+    sort(a,a+n);
+    for(int i=0;i<n;i++)
+    {
+        if(flag==a[i])                                      //THIS CODE IS FOR THE PRACTICE WEBSITE IN GEEKS FOR GEEKS, WHICH REQUIRES ONLY THE FUNCTION AND NOT THE DRIVER CODE
+            continue;                                       
+            
+        if(a[i]==a[i+1])
+            {
+                flag=a[i];
+                v.push_back(a[i]);
+                j++;
+            }
+    }
+    if(j>=1)
+        v.shrink_to_fit();
+    else
+        v.push_back(-1);
+        
+    return v;
+    // code here
+}
